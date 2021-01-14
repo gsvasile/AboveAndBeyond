@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85776750031d0524fb9fbe6d9c903ed5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rcsThrust: 250
+  rcsThrust: 200
   mainThrust: 4
 --- !u!1 &5766063251579419881
 GameObject:
@@ -365,7 +365,7 @@ GameObject:
   - component: {fileID: 8330411399053328856}
   m_Layer: 0
   m_Name: Rocket Body
-  m_TagString: Untagged
+  m_TagString: Friendly
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
