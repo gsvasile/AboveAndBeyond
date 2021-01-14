@@ -23,6 +23,12 @@ public class Rocket : MonoBehaviour
 
     private void ProcessInput()
     {
+        Thrust();
+        Rotate();
+    }
+
+    private void Thrust()
+    {
         if(Input.GetKey(KeyCode.Space))
         {
             if(rigidBody == null)
@@ -40,7 +46,13 @@ public class Rocket : MonoBehaviour
         {
             audioSource.Stop();
         }
-        
+    }
+
+    private void Rotate()
+    {
+        // Take manual control of rotation.
+        rigidBody.freezeRotation = true;
+
         if(Input.GetKey(KeyCode.A))
         {
             transform.Rotate(Vector3.forward);
@@ -49,5 +61,8 @@ public class Rocket : MonoBehaviour
         {
             transform.Rotate(Vector3.back);
         }
+
+        // Resume physics control of rotation.
+        rigidBody.freezeRotation = false;
     }
 }
